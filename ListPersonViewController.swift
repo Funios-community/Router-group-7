@@ -32,6 +32,8 @@ class ListPersonViewController: UIViewController, UITableViewDelegate, UITableVi
         let person = personList[indexPath.row]
         
         cell.labelPersonName.text = person.name
+        cell.action = self
+        cell.person = person
         return cell
     }
     
@@ -77,4 +79,14 @@ class ListPersonViewController: UIViewController, UITableViewDelegate, UITableVi
             detailVC?.person = personList[row!]
         }
     }
+}
+
+extension ListPersonViewController: PersonCellAction {
+    func onAlertClick(person: Person) {
+        
+        let alert = UIAlertController(title: "Hello", message: "My name is \(person.name)", preferredStyle: .alert)
+        alert.addAction(UIAlertAction(title: "ok", style: .default))
+        self.present(alert, animated: true)
+    }
+    
 }

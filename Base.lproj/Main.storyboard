@@ -29,17 +29,31 @@
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Person Name" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="E2I-uE-J2B">
-                                                    <rect key="frame" x="30" y="21" width="354" height="59"/>
+                                                    <rect key="frame" x="30" y="21" width="264" height="59"/>
                                                     <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                                     <nil key="textColor"/>
                                                     <nil key="highlightedColor"/>
                                                 </label>
+                                                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="tAd-bF-JnR">
+                                                    <rect key="frame" x="304" y="31" width="70" height="39"/>
+                                                    <constraints>
+                                                        <constraint firstAttribute="width" constant="70" id="hId-1R-rk5"/>
+                                                    </constraints>
+                                                    <state key="normal" title="Button"/>
+                                                    <buttonConfiguration key="configuration" style="plain" title="Alert"/>
+                                                    <connections>
+                                                        <action selector="onAlertClick:" destination="P8r-ZF-s1r" eventType="touchUpInside" id="SZk-gV-v3Q"/>
+                                                    </connections>
+                                                </button>
                                             </subviews>
                                             <constraints>
                                                 <constraint firstItem="E2I-uE-J2B" firstAttribute="leading" secondItem="hAp-iQ-Ebx" secondAttribute="leadingMargin" constant="10" id="2Hg-2L-DYi"/>
-                                                <constraint firstAttribute="trailingMargin" secondItem="E2I-uE-J2B" secondAttribute="trailing" constant="10" id="Cdk-OW-JoH"/>
+                                                <constraint firstAttribute="bottomMargin" secondItem="tAd-bF-JnR" secondAttribute="bottom" constant="20" id="6Jb-AM-O36"/>
+                                                <constraint firstItem="tAd-bF-JnR" firstAttribute="top" secondItem="hAp-iQ-Ebx" secondAttribute="topMargin" constant="20" id="EWl-LC-MKB"/>
                                                 <constraint firstItem="E2I-uE-J2B" firstAttribute="top" secondItem="hAp-iQ-Ebx" secondAttribute="topMargin" constant="10" id="d2Z-LS-95K"/>
                                                 <constraint firstAttribute="bottomMargin" secondItem="E2I-uE-J2B" secondAttribute="bottom" constant="10" id="lGm-d0-Pbf"/>
+                                                <constraint firstItem="tAd-bF-JnR" firstAttribute="leading" secondItem="E2I-uE-J2B" secondAttribute="trailing" constant="10" id="roC-o0-7k2"/>
+                                                <constraint firstAttribute="trailingMargin" secondItem="tAd-bF-JnR" secondAttribute="trailing" constant="20" id="uS3-yq-sGG"/>
                                             </constraints>
                                         </tableViewCellContentView>
                                         <connections>
