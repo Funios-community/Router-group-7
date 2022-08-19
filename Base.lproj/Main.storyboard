@@ -63,6 +63,9 @@
                         </constraints>
                     </view>
                     <navigationItem key="navigationItem" id="biA-Le-lO8"/>
+                    <connections>
+                        <segue destination="uqk-fS-4JF" kind="show" identifier="segueToDetail" id="yxW-16-45A"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
@@ -82,7 +85,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="34c-CW-4Rc" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1232" y="830"/>
+            <point key="canvasLocation" x="1258" y="641"/>
         </scene>
         <!--Detail View Controller-->
         <scene sceneID="62v-vS-IK8">
@@ -93,13 +96,13 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="ehu-Gh-kQn">
-                                <rect key="frame" x="20" y="64" width="374" height="374"/>
+                                <rect key="frame" x="20" y="108" width="374" height="374"/>
                                 <constraints>
                                     <constraint firstAttribute="width" secondItem="ehu-Gh-kQn" secondAttribute="height" multiplier="1:1" id="GhZ-SO-Nig"/>
                                 </constraints>
                             </imageView>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="PersonName" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontForContentSizeCategory="YES" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="eH8-7o-06r">
-                                <rect key="frame" x="20" y="458" width="374" height="24"/>
+                                <rect key="frame" x="20" y="502" width="374" height="24"/>
                                 <fontDescription key="fontDescription" style="UICTFontTextStyleTitle2"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
@@ -164,7 +167,7 @@
                 </navigationController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dLf-lw-DXy" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1313" y="-62"/>
+            <point key="canvasLocation" x="1258" y="-62"/>
         </scene>
     </scenes>
     <resources>

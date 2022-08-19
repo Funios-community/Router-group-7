@@ -37,11 +37,19 @@ class ListPersonViewController: UIViewController, UITableViewDelegate, UITableVi
     
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         
-        let storyboard = UIStoryboard(name: "Main", bundle: nil)
-        let detailVC = storyboard.instantiateViewController(withIdentifier: "DetailViewController") as! DetailViewController
-
+        // MARK: Route to storyboard without segue
+//        let storyboard = UIStoryboard(name: "Main", bundle: nil)
+//        let detailVC = storyboard.instantiateViewController(withIdentifier: "DetailViewController") as! DetailViewController
+//
+//        detailVC.person = personList[indexPath.row]
+//        self.show(detailVC, sender: nil)
+        
+        // MARK: with segue
+//        performSegue(withIdentifier: "segueToDetail", sender: indexPath.row)
+        
+        // MARK: Route to XiB
+        let detailVC = DetailXibViewController(nibName: "DetailXibViewController", bundle: nil)
         detailVC.person = personList[indexPath.row]
-//        let detailVC = DetailViewController(nibName: "", bundle: nil)
         self.show(detailVC, sender: nil)
     }
     
@@ -57,11 +65,16 @@ class ListPersonViewController: UIViewController, UITableViewDelegate, UITableVi
     }
  */
   
-    /*
+    
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        if segue.destination is DetailViewController {
-            let vc = segue.destination as? DetailViewController
-            vc?.bgColor = .orange
+//        if segue.destination is DetailViewController {
+//            let vc = segue.destination as? DetailViewController
+//            vc?.bgColor = .orange
+//        }
+        if segue.identifier == "segueToDetail" {
+            let row = sender as? Int
+            let detailVC = segue.destination as? DetailViewController
+            detailVC?.person = personList[row!]
         }
-    } */
+    }
 }
